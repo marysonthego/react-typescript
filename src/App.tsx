@@ -15,7 +15,7 @@ function App() {
 
   //define the printName function
   function printName(fn: (name: string) => void) { // a function void returns undefined
-    fn("John was here"); //call the function sent as a argument (printToConsole)
+    fn("John was here"); //call the function sent as an argument (printToConsole)
   }
 
   //define the function printToConsole
@@ -23,14 +23,12 @@ function App() {
     console.log(s);
   }
 
-  //call the function printName. It takes a function with name: string arguments */}
+  //call the function printName. It takes a function with name: string arguments
   printName(printToConsole);
 
   let isStudent: boolean;
   let hobbies: string[];
-  let role: [number, string]; // Tuple
-
-  role = [2, 'author'];
+  const role: [number, string] = [2, 'author']; // Tuple
 
   type Person = {
     name: string;
@@ -66,14 +64,14 @@ function App() {
     d: number;
   }
 
-  let y: Y = {
+  const y: Y = {
     a: 'a',
     b: 1,
     c: 'c',
     d: 2
   }
 
-  let person: Person = {
+  const person: Person = {
     name: 'John',
   }
 
