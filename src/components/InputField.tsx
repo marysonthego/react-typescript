@@ -7,7 +7,7 @@ interface Props {
   handleAdd: (e: React.FormEvent) => void;
 }
 
-const InputField = ({ todo, setTodo, handleAdd }: Props) => {
+export const InputField = ({ todo, setTodo, handleAdd }: Props) => {
   // OR
   //const InputField: React.FC<Props> = ({todo, setTodo}) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -17,16 +17,17 @@ const InputField = ({ todo, setTodo, handleAdd }: Props) => {
       className = "input"
       onSubmit={(e) => {
         handleAdd(e);
-        inputRef.current?.blur();
+        inputRef.current?.blur(); // blur shifts the focus from the input box
       }}
     >
       <input
         ref={inputRef}
         type="input"
-        placeholder="Enter a task"
-        className = "input__box"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
+        placeholder="Enter a task"
+        className = "input__box"
+
       />
       <button className="input_submit" type="submit">
         Go
@@ -34,5 +35,3 @@ const InputField = ({ todo, setTodo, handleAdd }: Props) => {
     </form>
   );
 };
-
-export default InputField;
