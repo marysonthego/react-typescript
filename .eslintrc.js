@@ -20,5 +20,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+      "no-empty-function": "off",
+      "@typescript-eslint/no-empty-function": "off"
     }
 }
