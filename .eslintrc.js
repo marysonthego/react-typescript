@@ -21,6 +21,7 @@ module.exports = {
     ],
     "rules": {
       "no-empty-function": "off",
-      "@typescript-eslint/no-empty-function": "off"
+      "@typescript-eslint/no-empty-function": "off",
+      "prefer-const": [1, {"destructuring": "all"}]
     }
 }
