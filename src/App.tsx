@@ -3,7 +3,7 @@ import './App.css';
 import {InputField} from './components/InputField';
 import {TodoList} from './components/TodoList';
 import {Todo} from './components/model';
-import {Person, PersonDestructured, PersonFC} from './components/Person';
+import {Person, PersonDestructured, PersonFC, HairColor} from './components/Person';
 import {DragDropContext, DropResult} from 'react-beautiful-dnd';
 
 const  App: React.FC = () => {
@@ -58,13 +58,13 @@ const  App: React.FC = () => {
         Taskify
       </span>
       <span className="heading"> Person:
-        <Person name="Mary" email="marysonthego@gmail.com" />
+        <Person name="Jack" email="marysonthego@gmail.com" hairColor={HairColor.Blonde} />
       </span>
       <span className="heading">PersonDestructured:
-        <PersonDestructured name="Mary" email="marysonthego@gmail.com" />
+        <PersonDestructured name="Jack" email="marysonthego@gmail.com" hairColor={HairColor.Blonde}/>
       </span>
       <span className="heading">PersonFC:
-        <PersonFC name="Mary" email="marysonthego@gmail.com" />
+        <PersonFC name="Pedro" email="marysonthego@gmail.com" hairColor={HairColor.Blonde}/>
       </span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
       <TodoList
